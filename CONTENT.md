@@ -22,3 +22,25 @@ Usage:
 
 WDIO Introduction
 https://webdriver.io/docs/api/
+
+
+# 2 Що таке Appium?
+Appium:
+- cross-platform (Android/iOS)
+- multilanguage (Java, Python, Ruby, JS)
+- Visual inspector
+
+Possibilities:
+- Automation of native, hybrid and mobile applications
+- Automating gestures (swipe, zoom, scroll, etc)
+- Automating on real devices and emulators
+
+Client library <-> Mobile JSON Wire Protocol <-> Appium Server <-> Mobile Device
+
+## Appium architecture
+Drivers (XCUITest for iOS, UIAutomator for Android)
+
+![Appium architecture](lesson02/appium_architecture.png)
+
+Appium Documentation
+https://appium.io/docs/en/latest/
