@@ -92,3 +92,28 @@ https://www.freecodecamp.org/news/best-vscode-extensions/
 
 Node.js
 https://nodejs.org/en
+
+
+# 4 Java + Android setup (Windows)
+## Java
+To check if Java is installed
+```
+java --version
+```
+
+Install Java  
+Set JAVA_HOME envvar to path to installed JDK  
+To Path envvar add path <JDK>/bin  
+
+## Android
+Download Android Studio
+Set ANDROID_HOME envvar to path `Users/<USER>/AppData/Local/Android/Sdk`
+To Path envar add paths:
+- `Users/<USER>/AppData/Local/Android/Sdk/tools`
+- `Users/<USER>/AppData/Local/Android/Sdk/platform-tools`
+
+Download Java
+https://www.oracle.com/il-en/java/technologies/downloads/
+
+Download Android Studio
+https://developer.android.com/
