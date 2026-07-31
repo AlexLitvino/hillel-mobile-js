@@ -117,3 +117,53 @@ https://www.oracle.com/il-en/java/technologies/downloads/
 
 Download Android Studio
 https://developer.android.com/
+
+
+# 5 Emulator+Appium+Appium Inspector Setup (Windows)
+To start new Android emulator:
+Android Studio -> More Actions -> Virtual Device Manager
+Create Virtual Device
+Select device
+Select OS image
+
+Install Appium
+```
+npm install -g appium
+```
+
+To start Appium run
+```
+appium
+```
+
+If you see error, run the following command:
+```
+Set-ExecutionPolicy Bypass -Scope Policy
+```
+
+Install drivers (list of drivers):
+```
+appium driver install <DRIVER_NAME>
+```
+
+For these course install:
+```
+appium driver install xcuitest
+appium driver install uiautomator2
+```
+
+Install Appium inspector (from GitHub repository)
+https://github.com/appium/appium-inspector/releases
+
+To start device click Run button.
+
+In Appium Server fill in Device Capabilities (Device Manager -> View Details):
+- platformName (Android / iOS)
+- deviceName
+- platformVersion
+- automationName (uiautomator2 / xcuitest)
+
+Capabilities could be saved for future (Save As...)
+
+Install Appium
+https://appium.io/docs/en/2.0/quickstart/install/
