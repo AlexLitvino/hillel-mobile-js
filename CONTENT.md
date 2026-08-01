@@ -167,3 +167,15 @@ Capabilities could be saved for future (Save As...)
 
 Install Appium
 https://appium.io/docs/en/2.0/quickstart/install/
+
+
+# 6 VS Code + Node.js setup (Mac)
+Install VS Code  
+Add Code Spell Checker extension  
+
+Install Node.js
+```
+brew install node@24
+node -v
+npm -v
+```
