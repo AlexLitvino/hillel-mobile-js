@@ -179,3 +179,33 @@ brew install node@24
 node -v
 npm -v
 ```
+
+
+# 7 Appium+Appium Inspector + Xcode + Simulator setup (Mac)
+Install XCode (navigate from Google to appstore).  
+Install with all default options and simulators.  
+XCode -> Open Developer Tool -> Simulator  
+
+Install Appium
+Install Appium Server
+```
+npm i -g appium
+```
+Install Appium drivers
+```
+appium driver install xcuitest
+appium driver install uiautomator2
+```
+
+Install Appium Inspector
+https://github.com/appium/appium-inspector/releases
+Download and install
+On Appium Inspector you got "Apple could not verify “Appium Inspector” is free of malware that may harm your Mac or compromise your privacy." error.
+To fix it:
+- Open System Settings: Click the Apple menu icon and select System Settings
+- Navigate to Security: Click Privacy & Security in the left sidebar and scroll down to the Security section
+- Authorize the app: Look for the message stating "Appium Inspector was blocked" and click the Open Anyway button
+- Confirm your choice: Click Open Anyway or Open on the final confirmation prompt and enter your Mac's administrator password if requested
+
+Android and iOS applications for testing
+https://github.com/Hillel-QA-Auto-Group8/wdio-appium-mobile-course-apps
