@@ -209,3 +209,48 @@ To fix it:
 
 Android and iOS applications for testing
 https://github.com/Hillel-QA-Auto-Group8/wdio-appium-mobile-course-apps
+
+
+# 8 Java + Android Studio setup (Mac)
+Install Java
+https://www.oracle.com/ua/java/technologies/downloads
+
+Install Android Studio
+https://developer.android.com/studio
+
+In Android Studio, install Android 14.0 SDK.
+
+Set env vars:
+```
+nano ~/.zshrc
+```
+Copy to file envvars:
+```
+export ANDROID_HOME=$HOME/Library/Android/sdk (або інший шлях, якщо відрізняється)
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+```
+
+Install UIAutomator2 driver:
+```
+appium driver install uiautomator2
+```
+
+Start Appium server:
+```
+appium
+```
+
+And open Appium inspector
+
+Create virtual device in Android Studio
+Device Manager -> Add a new Device -> Create Virtual Device
+
+
+
+
+/Users/olytvynov/Library/Android/sdk
