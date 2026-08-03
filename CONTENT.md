@@ -250,7 +250,148 @@ And open Appium inspector
 Create virtual device in Android Studio
 Device Manager -> Add a new Device -> Create Virtual Device
 
+In Appium Inspector add device capabilities:
+```
+{
+    "platformName": "Android",
+    "appium:deviceName": "Pixel 8",
+    "appium:automationName": "uiautomator2"
+}
+```
 
 
+# 9 WDIO setup + Review
+Install WebDriverIO
+```
+npm init wdio@latest .
+```
+During installation set the following options:
+```
+✔ A project named "hillel-mobile-js" was detected at "/Users/olytvynov/projects/hillel-mobile-js", correct? Yes
+✔ What type of testing would you like to do? E2E Testing - of Web or Mobile Applications
+✔ Where is your automation backend located? On my local machine
+✔ Which environment you would like to automate? Web - web applications in the browser
+✔ With which browser should we start? Chrome
+✔ Which framework do you want to use? Mocha (https://mochajs.org/)
+✔ Do you want to use Typescript to write tests? No
+✔ Do you want WebdriverIO to autogenerate some test files? Yes
+✔ What should be the location of your spec files? /Users/olytvynov/projects/hillel-mobile-js/test/specs/**/*.js
+✔ Do you want to use page objects (https://martinfowler.com/bliki/PageObject.html)? No
+✔ Which reporter do you want to use? spec
+✔ Do you want to add a plugin to your test setup? 
+✔ Would you like to include Visual Testing to your setup? For more information see 
+https://webdriver.io/docs/visual-testing No
+✔ Do you want to add a service to your test setup? 
+✔ Do you want me to run `npm install` Yes
+```
 
-/Users/olytvynov/Library/Android/sdk
+To run all tests:
+```
+npx wdio run ./wdio.conf.js
+```
+
+To run tests in specific file
+```
+npx wdio run ./wdio.conf.js --spec ./test/specs/myTest.spec.js
+```
+
+To run tests in files by filter
+```
+npx wdio run ./wdio.conf.js --spec ./test/specs/*.js
+```
+
+To run tests with specific tag
+```
+npx wdio run ./wdio.conf.js --cucumberOpts.tagExpression=@smoke
+```
+
+To run tests in debug mode
+```
+npx wdio run ./wdio.conf.js --debug
+```
+
+To group tests use `describe` from Mocha:
+```
+describe("<TEST SUITE NAME>", () => {
+
+})
+```
+
+Test is defined by `it`:
+```
+it("<TEST NAME>", async () => {
+
+})
+```
+
+Defining element:
+```
+$(<CSS_OR_XPATH_LOCATOR>)
+```
+
+Hooks:
+- before
+- beforeEach
+- after
+- afterEach
+
+```
+    before(() => {
+        console.log("This is BEFORE hook");
+    })
+
+    beforeEach(() => {
+        console.log("This is BEFOREEACH hook");
+    })
+
+    after(() => {
+        console.log("This is AFTER hook");
+    })
+
+    afterEach(() => {
+        console.log("This is AFTEREACH hook");
+    })
+```
+
+Hooks outside describe block will be used for all tests in file.
+Hooks inside describe block will be used only for tests inside that block.
+
+In the root of project create jsonfig.json file and add the following code to enable autocompletion
+```
+{
+    "compilerOptions": {
+        "types": [
+            "node",
+            "@wdio/globals/types",
+            "@wdio/mocha-framework"
+        ]
+    }
+}
+```
+
+To perform assertion use `expect` function
+```
+expect(<ENTITY>).<assertion>(<expected_value>);
+expect(title).toBe('Expected Title');
+```
+
+Some assertions:
+- toBe
+- toContain
+- toBeExisting
+- toBeDisplayed
+- toHaveText
+- toHaveAttribute
+- toHaveValue
+
+WebdriverIO
+https://webdriver.io/
+
+WebDriverIO Getting Started
+https://webdriver.io/docs/gettingstarted/
+
+Expect (assertions)
+https://webdriver.io/docs/api/expect-webdriverio/
+
+Site for practice
+https://the-internet.herokuapp.com/
