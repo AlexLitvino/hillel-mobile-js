@@ -395,3 +395,48 @@ https://webdriver.io/docs/api/expect-webdriverio/
 
 Site for practice
 https://the-internet.herokuapp.com/
+
+
+# 10 Селектори + Пошук елементів у WDIO
+Selectors:
+- CSS
+- XPath
+
+Selectors priority:
+- Special tests attributes(data-testid, data-qa, data-test etc)
+- IDs
+- Classes
+- Text
+- Other attributes
+
+Install SelectorsHub extension for Chrome
+
+```
+npx wdio run  ./wdio.conf.js --spec=./test/specs/selectors-practice.e2e.js
+```
+
+Selector by full text (starts with `=` following with text):
+```
+await $('=Sign In').click();
+```
+
+Selector by partial text (starts with `*=` following with text):
+```
+await $('*=Sign I').click();
+```
+
+If selector finds group of elements, function $ returns the first one.
+
+Function `$$` returns array of elements.
+
+HTML Element Reference
+https://www.w3schools.com/tags/
+
+CSS Selectors
+https://htmlcheatsheet.com/css/
+
+XPath Selectors
+https://devhints.io/xpath
+
+Site for practice
+https://qauto.forstudy.space/
