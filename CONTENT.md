@@ -490,3 +490,6 @@ expect($('#my-element')).not.toBeDisplayed();
 
 Expect (list of assertions)
 https://webdriver.io/docs/api/expect-webdriverio/
+
+
+# 12 POM у WDIO
