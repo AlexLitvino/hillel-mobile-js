@@ -440,3 +440,53 @@ https://devhints.io/xpath
 
 Site for practice
 https://qauto.forstudy.space/
+
+
+# 11 Екшини із елементами у WDIO + Ассершини
+In package.json could be added `spec` to pass file name to command line
+```
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js --spec"
+  }
+```
+
+If check is performed earlier then page changes, use waitForXXXX method:
+```
+element.waitForDisplayed();
+```
+
+Clicking:
+- click()
+- doubleClick()
+- click({button: "right"})
+
+Text fields:
+- setValue
+- clearValue
+
+Dropdowns:
+- selectByAttribute
+- selectByIndex
+- selectByVisibleText
+
+For checkboxes use click method.
+
+Drag and drop elements:
+```
+await $('#source').dragAndDrop($('#target')); 
+await elem.dragAndDrop({ x: 100, y: 200 });
+```
+
+Uploading file
+```
+await $('[type="file"]').setValue('path/to/your/file.jpg');
+```
+
+Method not  
+It reversing check:
+```
+expect($('#my-element')).not.toBeDisplayed();
+```
+
+Expect (list of assertions)
+https://webdriver.io/docs/api/expect-webdriverio/
