@@ -493,3 +493,32 @@ https://webdriver.io/docs/api/expect-webdriverio/
 
 
 # 12 POM у WDIO
+
+
+# 13 CLI + Config File
+WDIO config file - `wdio.conf.js`
+bail - max number of failed tests to stop run
+
+Setup project
+```
+npx wdio config
+```
+
+Run tests with config
+```
+npx wdio run <CONFIG_FILE>
+```
+
+Run tests with config
+```
+npx wdio run <CONFIG_FILE> --spec <TEST_FILE>
+```
+
+It is possible to redefine config file options in CLI:
+--baseUrl
+
+Configuration File
+https://webdriver.io/docs/configurationfile/
+
+WDIO CLI Options
+https://v6.webdriver.io/docs/clioptions.html
